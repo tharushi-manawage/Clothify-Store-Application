@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: C9E0EB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.pos.controller.user.SignInFormController">
+   <children>
+      <ImageView fitHeight="478.0" fitWidth="568.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/img/people-shopping-with-bags.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0074bd" height="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="566.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0060ac" height="42.0" layoutY="499.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="566.0" />
+      <Text fill="WHITE" layoutX="196.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLOTHIFY">
+         <font>
+            <Font name="Forefront BookSH" size="45.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="355.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Panadura, Sri Lanka">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="157.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Beyond the Elegance&quot;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="140.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clothify Store (PVT) Ltd. by Mr. Sheshan Thilakshana" textAlignment="CENTER" wrappingWidth="285.732421875">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="144.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone: (+94) 123 456 789  |  E-mail: clothify@sample.com">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="248.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="©Clothify 2024">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" blendMode="OVERLAY" fill="WHITE" height="350.0" layoutX="613.0" layoutY="107.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="300.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Text layoutX="666.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back!">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtUsername" focusColor="#4355f1" labelFloat="true" layoutX="649.0" layoutY="148.0" prefHeight="25.0" prefWidth="230.0" promptText="Username" unFocusColor="BLACK" />
+      <JFXPasswordField fx:id="txtPassword" focusColor="#4355f1" labelFloat="true" layoutX="649.0" layoutY="207.0" prefHeight="25.0" prefWidth="230.0" promptText="Password" unFocusColor="BLACK" />
+      <Text layoutX="651.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password?">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btnReset" layoutX="737.0" layoutY="234.0" onAction="#btnResetOnAction" text="Reset" textFill="#4355f1" underline="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <CheckBox layoutX="651.0" layoutY="280.0" mnemonicParsing="false" text="Remember Me">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></CheckBox>
+      <JFXButton fx:id="btnLogIn" layoutX="692.0" layoutY="342.0" onAction="#btnLogInOnAction" prefHeight="15.0" prefWidth="65.0" ripplerFill="BLACK" style="-fx-background-color: #4355F1;" text="Log In" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnRegister" layoutX="771.0" layoutY="342.0" onAction="#btnRegisterOnAction" prefHeight="15.0" prefWidth="65.0" style="-fx-background-color: #4355F1;" text="Register" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Separator layoutX="648.0" layoutY="397.0" prefHeight="3.0" prefWidth="230.0" />
+      <Text layoutX="648.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you haven't an account?">
+         <font>
+            <Font size="11.0" />
+         </font></Text>
+      <JFXButton fx:id="btnCreateAccount" layoutX="783.0" layoutY="406.0" onAction="#btnCreateAccountOnAction" text="Create an account" textFill="#4355f1" underline="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

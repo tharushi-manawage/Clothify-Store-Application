@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #C9E0EB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.pos.controller.user.AdminDashboardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
+      <Text fill="WHITE" layoutX="332.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clothify Store Dashboard">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" blendMode="OVERLAY" fill="WHITE" height="430.0" layoutX="23.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <JFXButton layoutX="51.0" layoutY="102.0" text="Home" />
+      <JFXButton layoutX="51.0" layoutY="132.0" text="Manage Employees" />
+      <JFXButton layoutX="51.0" layoutY="162.0" text="Manage Suppliers" />
+      <JFXButton layoutX="51.0" layoutY="192.0" text="Manage Inventories" />
+      <JFXButton layoutX="51.0" layoutY="222.0" text="Manage Orders" />
+      <JFXButton layoutX="51.0" layoutY="252.0" text="Reports" />
+      <Text layoutX="59.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Info" underline="true" />
+      <Text layoutX="59.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone: (+94) 123 456 789 E-mail: clothify@sample.com" wrappingWidth="140.814453125">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="83.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="©Clothify 2024" />
+      <Text layoutX="106.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" />
+      <Text layoutX="78.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLOTHIFY">
+         <font>
+            <Font name="Forefront BookSH" size="20.0" />
+         </font>
+      </Text>
+      <Separator blendMode="COLOR_BURN" layoutX="242.0" layoutY="62.0" orientation="VERTICAL" prefHeight="453.0" prefWidth="4.0">
+         <effect>
+            <Lighting bumpInput="$null" diffuseConstant="2.0" light="$null" specularConstant="0.0" specularExponent="0.0" surfaceScale="10.0" />
+         </effect>
+      </Separator>
+      <Text layoutX="266.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Month :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="321.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="June">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="430.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="470.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20/6/2024">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="601.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="642.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00 : 00 : 00">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="785.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Net Sales : Rs.">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="870.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Separator blendMode="COLOR_BURN" layoutX="398.0" layoutY="78.0" orientation="VERTICAL" prefHeight="50.0" prefWidth="6.0">
+         <effect>
+            <Lighting diffuseConstant="2.0" light="$null" specularConstant="0.0" specularExponent="0.0" surfaceScale="10.0">
+               <bumpInput>
+                  <DropShadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Separator>
+      <Separator blendMode="COLOR_BURN" layoutX="567.0" layoutY="78.0" orientation="VERTICAL" prefHeight="50.0" prefWidth="6.0">
+         <effect>
+            <Lighting diffuseConstant="2.0" light="$null" specularConstant="0.0" specularExponent="0.0" surfaceScale="10.0">
+               <bumpInput>
+                  <DropShadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Separator>
+      <Separator blendMode="COLOR_BURN" layoutX="752.0" layoutY="78.0" orientation="VERTICAL" prefHeight="50.0" prefWidth="6.0">
+         <effect>
+            <Lighting diffuseConstant="2.0" light="$null" specularConstant="0.0" specularExponent="0.0" surfaceScale="10.0">
+               <bumpInput>
+                  <DropShadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Separator>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="247.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle arcHeight="20.0" arcWidth="20.0" blendMode="OVERLAY" fill="WHITE" height="200.0" layoutX="266.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="157.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" blendMode="OVERLAY" fill="WHITE" height="200.0" layoutX="499.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="157.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" blendMode="OVERLAY" fill="WHITE" height="200.0" layoutX="735.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="157.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+   </children>
+</AnchorPane>
