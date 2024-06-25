@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #C9E0EB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.pos.controller.user.ReportsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
+      <Text fill="WHITE" layoutX="434.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="363.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Details" />
+      <Text layoutX="363.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Details" />
+      <Text layoutX="363.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Details" />
+      <Text layoutX="363.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Details" />
+      <JFXButton fx:id="btnPreviewEmployeeReport" layoutX="501.0" layoutY="96.0" onAction="#btnPreviewEmployeeReportOnAction" style="-fx-background-color: #000000;" text="Preview Report" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPreviewSupplierReport" layoutX="501.0" layoutY="132.0" onAction="#btnPreviewSupplierReportOnAction" style="-fx-background-color: #000000;" text="Preview Report" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPreviewInventoryReport" layoutX="501.0" layoutY="168.0" onAction="#btnPreviewInventoryReportOnAction" style="-fx-background-color: #000000;" text="Preview Report" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="501.0" layoutY="204.0" style="-fx-background-color: #000000;" text="Preview Report" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator blendMode="COLOR_BURN" layoutX="333.0" layoutY="254.0" prefHeight="3.0" prefWidth="300.0" style="-fx-background-color: #000000;">
+         <effect>
+            <Lighting diffuseConstant="2.0" light="$null" specularConstant="0.0" specularExponent="0.0" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Separator>
+      <Text layoutX="447.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Details" />
+      <JFXComboBox fx:id="cmbUserID" focusColor="BLACK" layoutX="380.0" layoutY="315.0" prefHeight="25.0" prefWidth="200.0" promptText="Select user ID" unFocusColor="BLACK" />
+      <JFXButton fx:id="btnDailyReport" layoutX="430.0" layoutY="376.0" onAction="#btnDailyReportOnAction" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #4355F1;" text="Daily Report" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnMonthlyReport" layoutX="430.0" layoutY="412.0" onAction="#btnMonthlyReportOnAction" style="-fx-background-color: #4355F1;" text="Monthly Report" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAnnualReport" layoutX="430.0" layoutY="448.0" onAction="#btnAnnualReportOnAction" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #4355F1;" text="Annual Report" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

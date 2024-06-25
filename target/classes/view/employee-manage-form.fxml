@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.pos.controller.employee.EmployeeManageFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
+      <Text fill="WHITE" layoutX="372.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Employee">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="27.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID :" />
+      <Text fx:id="txtEmployeeID" layoutX="106.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EM001" />
+      <JFXButton fx:id="btnRegisterEmployee" layoutX="152.0" layoutY="72.0" onAction="#btnRegisterEmployeeOnAction" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #10B634;" text="Register Employee" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbUserID" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="121.0" prefHeight="25.0" prefWidth="200.0" promptText="User ID" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXButton fx:id="btnSearch" layoutX="27.0" layoutY="157.0" onAction="#btnSearchOnAction" style="-fx-background-color: #000000;" text="Search" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtEmployeeName" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="231.0" prefHeight="25.0" prefWidth="200.0" promptText="Employee Name" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="286.0" prefHeight="25.0" prefWidth="200.0" promptText="Email" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtJoinedDate" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="341.0" prefHeight="25.0" prefWidth="200.0" promptText="Joined Date" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbEmployeeType" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="396.0" prefHeight="25.0" prefWidth="200.0" promptText="Employee Type" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXButton fx:id="btnUpdateEmployee" layoutX="87.0" layoutY="451.0" onAction="#btnUpdateEmployeeOnAction" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #4355F1;" text="Update Employee" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDeleteEmployee" layoutX="87.0" layoutY="486.0" onAction="#btnDeleteEmployeeOnAction" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #F51919;" text="Delete Employee" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="281.0" layoutY="70.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="3.0" />
+      <Text layoutX="568.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Details">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblEmployeeDetails1" layoutX="301.0" layoutY="100.0" prefHeight="185.0" prefWidth="640.0">
+        <columns>
+          <TableColumn fx:id="colUserID" prefWidth="56.0" text="User ID" />
+          <TableColumn fx:id="colEmployeeID" prefWidth="75.0" text="Employee ID" />
+            <TableColumn fx:id="colName" prefWidth="110.0" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="125.0" text="Email" />
+            <TableColumn fx:id="colPhoneNumber1" prefWidth="101.0" text="Phone Number 1" />
+            <TableColumn fx:id="colEmployeeType" minWidth="0.0" prefWidth="90.0" text="Employee Type" />
+            <TableColumn fx:id="colJoinedDate" minWidth="0.0" prefWidth="82.0" text="Joined Date" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblEmployeeDetails2" layoutX="301.0" layoutY="296.0" prefHeight="185.0" prefWidth="640.0">
+         <columns>
+            <TableColumn fx:id="colUserID" prefWidth="56.0" text="User ID" />
+            <TableColumn fx:id="colUserType" prefWidth="72.0" text="User Type" />
+            <TableColumn fx:id="colDateOfBirth" prefWidth="79.0" text="Date Of Birth" />
+            <TableColumn fx:id="colNICNumber" prefWidth="78.0" text="NIC Number" />
+            <TableColumn fx:id="colCity" prefWidth="91.0" text="City" />
+            <TableColumn fx:id="colProvince" minWidth="0.0" prefWidth="87.0" text="Province" />
+            <TableColumn fx:id="colPhoneNumber2" prefWidth="100.0" text="Phone Number 2" />
+            <TableColumn fx:id="colUserStatus" prefWidth="76.0" text="User Status" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnPrint" layoutX="889.0" layoutY="498.0" onAction="#btnPrintOnAction" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #000000;" text="Print" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
