@@ -1,8 +1,11 @@
 package edu.icet.pos.dao.custom.impl;
 
+import edu.icet.pos.dao.custom.UserDao;
+import edu.icet.pos.entity.UserEntity;
+import edu.icet.pos.util.HibernateUtil;
 import org.hibernate.Session;
 
-UserDaoImpl implements UserDao {
+public class UserDaoImpl implements UserDao {
 
     @Override
     public boolean save(UserEntity entity) {
@@ -32,6 +35,11 @@ UserDaoImpl implements UserDao {
 //            throw new RuntimeException(e);
 //        }
 //        return false;
+    }
+
+    @Override
+    public boolean update(String id) {
+        return false;
     }
 
     @Override

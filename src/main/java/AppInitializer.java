@@ -10,7 +10,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("view/sign-in-form.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/order-manage-form.fxml"))));
         stage.show();
     }
 }

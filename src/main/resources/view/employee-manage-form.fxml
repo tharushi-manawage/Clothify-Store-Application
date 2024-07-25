@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -14,15 +15,15 @@
 
 <AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.pos.controller.employee.EmployeeManageFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
+      <Rectangle fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
       <Text fill="WHITE" layoutX="372.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Employee">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="27.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID :" />
-      <Text fx:id="txtEmployeeID" layoutX="106.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EM001" />
-      <JFXButton fx:id="btnRegisterEmployee" layoutX="152.0" layoutY="72.0" onAction="#btnRegisterEmployeeOnAction" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #10B634;" text="Register Employee" textFill="WHITE">
+      <Text layoutX="27.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID :" />
+      <Label fx:id="lblEmployeeID" layoutX="106.0" layoutY="76.0" text="EM0000" />
+      <JFXButton fx:id="btnRegisterEmployee" layoutX="155.0" layoutY="72.0" onAction="#btnRegisterEmployeeOnAction" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #10B634;" text="Register Employee" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -37,10 +38,10 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXTextField fx:id="txtEmployeeName" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="231.0" prefHeight="25.0" prefWidth="200.0" promptText="Employee Name" unFocusColor="BLACK" />
-      <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="286.0" prefHeight="25.0" prefWidth="200.0" promptText="Email" unFocusColor="BLACK" />
-      <JFXTextField fx:id="txtJoinedDate" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="341.0" prefHeight="25.0" prefWidth="200.0" promptText="Joined Date" unFocusColor="BLACK" />
-      <JFXComboBox fx:id="cmbEmployeeType" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="396.0" prefHeight="25.0" prefWidth="200.0" promptText="Employee Type" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="231.0" prefHeight="25.0" prefWidth="200.0" promptText="Name" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtEmailAddress" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="286.0" prefHeight="25.0" prefWidth="200.0" promptText="Email Address" unFocusColor="BLACK" />
+      <JFXTextField fx:id="dateAppointedDate" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="341.0" prefHeight="25.0" prefWidth="200.0" promptText="Appointed Date" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbStatus" focusColor="BLACK" labelFloat="true" layoutX="28.0" layoutY="396.0" prefHeight="25.0" prefWidth="200.0" promptText="User/Employee Status" unFocusColor="BLACK">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -63,24 +64,24 @@
       </Text>
       <TableView fx:id="tblEmployeeDetails1" layoutX="301.0" layoutY="100.0" prefHeight="185.0" prefWidth="640.0">
         <columns>
-          <TableColumn fx:id="colUserID" prefWidth="56.0" text="User ID" />
           <TableColumn fx:id="colEmployeeID" prefWidth="75.0" text="Employee ID" />
+          <TableColumn fx:id="colUserIDTbl1" prefWidth="56.0" text="User ID" />
             <TableColumn fx:id="colName" prefWidth="110.0" text="Name" />
-            <TableColumn fx:id="colEmail" prefWidth="125.0" text="Email" />
-            <TableColumn fx:id="colPhoneNumber1" prefWidth="101.0" text="Phone Number 1" />
-            <TableColumn fx:id="colEmployeeType" minWidth="0.0" prefWidth="90.0" text="Employee Type" />
-            <TableColumn fx:id="colJoinedDate" minWidth="0.0" prefWidth="82.0" text="Joined Date" />
+            <TableColumn fx:id="colEmail" prefWidth="131.0" text="Email" />
+            <TableColumn fx:id="colContactNumber1" prefWidth="82.0" text="Contact No. 1" />
+            <TableColumn fx:id="colAppointedDate" minWidth="0.0" prefWidth="86.0" text="Appointed On" />
+            <TableColumn fx:id="colEmployeeStatus" minWidth="0.0" prefWidth="99.0" text="Employee Status" />
         </columns>
       </TableView>
       <TableView fx:id="tblEmployeeDetails2" layoutX="301.0" layoutY="296.0" prefHeight="185.0" prefWidth="640.0">
          <columns>
-            <TableColumn fx:id="colUserID" prefWidth="56.0" text="User ID" />
-            <TableColumn fx:id="colUserType" prefWidth="72.0" text="User Type" />
+            <TableColumn fx:id="colUserIDTbl2" prefWidth="58.0" text="User ID" />
+            <TableColumn fx:id="colUserType" prefWidth="63.0" text="User Type" />
             <TableColumn fx:id="colDateOfBirth" prefWidth="79.0" text="Date Of Birth" />
-            <TableColumn fx:id="colNICNumber" prefWidth="78.0" text="NIC Number" />
-            <TableColumn fx:id="colCity" prefWidth="91.0" text="City" />
-            <TableColumn fx:id="colProvince" minWidth="0.0" prefWidth="87.0" text="Province" />
-            <TableColumn fx:id="colPhoneNumber2" prefWidth="100.0" text="Phone Number 2" />
+            <TableColumn fx:id="colNICNumber" prefWidth="85.0" text="NIC Number" />
+            <TableColumn fx:id="colCity" prefWidth="94.0" text="City" />
+            <TableColumn fx:id="colProvince" minWidth="0.0" prefWidth="102.0" text="Province" />
+            <TableColumn fx:id="colContactNumber2" prefWidth="82.0" text="Contact No. 2" />
             <TableColumn fx:id="colUserStatus" prefWidth="76.0" text="User Status" />
          </columns>
       </TableView>

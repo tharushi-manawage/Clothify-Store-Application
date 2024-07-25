@@ -22,8 +22,8 @@
             <Image url="@../asset/img/people-shopping-with-bags.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0074bd" height="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="566.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0060ac" height="42.0" layoutY="499.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="566.0" />
+      <Rectangle fill="#0074bd" height="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="566.0" />
+      <Rectangle fill="#0060ac" height="42.0" layoutY="499.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="566.0" />
       <Text fill="WHITE" layoutX="196.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLOTHIFY">
          <font>
             <Font name="Forefront BookSH" size="45.0" />
@@ -54,16 +54,16 @@
             <Font size="11.0" />
          </font>
       </Text>
+      <Text layoutX="673.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back!">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
       <Rectangle arcHeight="20.0" arcWidth="20.0" blendMode="OVERLAY" fill="WHITE" height="350.0" layoutX="613.0" layoutY="107.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="300.0">
          <effect>
             <DropShadow />
          </effect>
       </Rectangle>
-      <Text layoutX="666.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back!">
-         <font>
-            <Font name="System Bold" size="25.0" />
-         </font>
-      </Text>
       <JFXTextField fx:id="txtUsername" focusColor="#4355f1" labelFloat="true" layoutX="649.0" layoutY="148.0" prefHeight="25.0" prefWidth="230.0" promptText="Username" unFocusColor="BLACK" />
       <JFXPasswordField fx:id="txtPassword" focusColor="#4355f1" labelFloat="true" layoutX="649.0" layoutY="207.0" prefHeight="25.0" prefWidth="230.0" promptText="Password" unFocusColor="BLACK" />
       <Text layoutX="651.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password?">

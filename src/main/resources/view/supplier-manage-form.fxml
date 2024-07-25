@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.pos.controller.supplier.SupplierManageFormController">
     <children>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
+        <Rectangle fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
         <Text fill="WHITE" layoutX="380.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Supplier">
             <font>
                 <Font name="System Bold" size="25.0" />
@@ -22,11 +22,24 @@
         </Text>
         <Text layoutX="27.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier ID :" />
         <Text fx:id="txtSupplierID" layoutX="98.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SU001" />
-        <JFXButton fx:id="btnRegisterSupplier" layoutX="142.0" layoutY="71.0" onAction="#btnRegisterSupplierOnaction" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #10B634;" text="Register Supplier" textFill="WHITE">
+        <JFXButton fx:id="btnRegisterSupplier" layoutX="142.0" layoutY="71.0" onAction="#btnRegisterSupplierOnAction" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #10B634;" text="Register Supplier" textFill="WHITE">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
+        <JFXTextField fx:id="txtSupplierName" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="119.0" prefHeight="25.0" prefWidth="200.0" promptText="Supplier Name" unFocusColor="BLACK" />
+        <JFXTextField fx:id="txtEmailAddress" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="171.0" prefHeight="25.0" prefWidth="200.0" promptText="Email Address" unFocusColor="BLACK" />
+        <JFXTextField fx:id="txtCompany" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="223.0" prefHeight="25.0" prefWidth="200.0" promptText="Company" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtContactNumber" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="275.0" prefHeight="25.0" prefWidth="200.0" promptText="Contact Number" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtSupplyingProduct" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="327.0" prefHeight="25.0" prefWidth="200.0" promptText="Supplying Product" unFocusColor="BLACK" />
+        <JFXComboBox fx:id="cmbSize" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="378.0" prefHeight="25.0" prefWidth="200.0" promptText="Size" unFocusColor="BLACK">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXComboBox>
+      <JFXTextField fx:id="txtDeliveredQuantity" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="429.0" prefHeight="25.0" prefWidth="200.0" promptText="Delivered Quantity" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtJoinedDate" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="480.0" prefHeight="25.0" prefWidth="200.0" promptText="Joined Date" unFocusColor="BLACK" />
+        <Separator layoutX="261.0" layoutY="70.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="3.0" />
         <JFXComboBox fx:id="cmbSupplierID" focusColor="BLACK" labelFloat="true" layoutX="282.0" layoutY="75.0" prefHeight="25.0" prefWidth="200.0" promptText="Supplier ID" unFocusColor="BLACK">
             <cursor>
                 <Cursor fx:constant="HAND" />
@@ -37,14 +50,6 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-        <JFXTextField fx:id="txtSupplierName" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="119.0" prefHeight="25.0" prefWidth="200.0" promptText="Supplier Name" unFocusColor="BLACK" />
-        <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="171.0" prefHeight="25.0" prefWidth="200.0" promptText="Email" unFocusColor="BLACK" />
-        <JFXTextField fx:id="txtCompany" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="223.0" prefHeight="25.0" prefWidth="200.0" promptText="Company" unFocusColor="BLACK" />
-        <JFXComboBox fx:id="cmbSize" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="378.0" prefHeight="25.0" prefWidth="200.0" promptText="Size" unFocusColor="BLACK">
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </JFXComboBox>
         <JFXButton fx:id="btnUpdateSupplier" layoutX="282.0" layoutY="175.0" onAction="#btnUpdateSupplierOnAction" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #4355F1;" text="Update Supplier" textFill="WHITE">
             <cursor>
                 <Cursor fx:constant="HAND" />
@@ -55,7 +60,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-        <Separator layoutX="261.0" layoutY="70.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="3.0" />
+      <Separator layoutX="282.0" layoutY="247.0" prefHeight="3.0" prefWidth="659.0" />
         <Text layoutX="560.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Details">
             <font>
                 <Font name="System Bold" size="14.0" />
@@ -64,14 +69,14 @@
         <TableView fx:id="tblSupplierDetails" layoutX="282.0" layoutY="299.0" prefHeight="185.0" prefWidth="659.0">
             <columns>
                 <TableColumn fx:id="colSupplierID" prefWidth="68.0" text="Supplier ID" />
-                <TableColumn fx:id="colName" prefWidth="83.0" text="Name" />
-                <TableColumn fx:id="colEmail" prefWidth="104.0" text="Email" />
+                <TableColumn fx:id="colName" prefWidth="92.0" text="Name" />
+                <TableColumn fx:id="colEmail" prefWidth="95.0" text="Email" />
                 <TableColumn fx:id="colCompany" prefWidth="79.0" text="Company" />
                 <TableColumn fx:id="colContactNumber" prefWidth="72.0" text="Contact No." />
                 <TableColumn fx:id="colProduct" minWidth="0.0" prefWidth="87.0" text="Product" />
                 <TableColumn fx:id="colSize" minWidth="0.0" prefWidth="48.0" text="Size" />
             <TableColumn fx:id="colQTY" minWidth="0.0" prefWidth="47.0" text="QTY" />
-            <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="70.0" text="Date" />
+            <TableColumn fx:id="colJoinedDate" minWidth="0.0" prefWidth="70.0" text="Joined On" />
             </columns>
         </TableView>
         <JFXButton fx:id="btnPrint" layoutX="889.0" layoutY="498.0" onAction="#btnPrintOnAction" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #000000;" text="Print" textFill="WHITE">
@@ -79,10 +84,5 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-      <JFXTextField fx:id="txtContactNumber" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="275.0" prefHeight="25.0" prefWidth="200.0" promptText="Contact Number" unFocusColor="BLACK" />
-      <JFXTextField fx:id="txtSuppyingProduct" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="327.0" prefHeight="25.0" prefWidth="200.0" promptText="Supplying Product" unFocusColor="BLACK" />
-      <JFXTextField fx:id="txtDeliveredQuantity" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="429.0" prefHeight="25.0" prefWidth="200.0" promptText="Delivered Quantity" unFocusColor="BLACK" />
-      <JFXTextField fx:id="txtSuppliedDate" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="480.0" prefHeight="25.0" prefWidth="200.0" promptText="Supplied Date" unFocusColor="BLACK" />
-      <Separator layoutX="282.0" layoutY="247.0" prefHeight="3.0" prefWidth="659.0" />
     </children>
 </AnchorPane>

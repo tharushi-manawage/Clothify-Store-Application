@@ -1,4 +1,3 @@
 package edu.icet.pos.dao;
 
-public interface SuperDao {
-}
+public interface SuperDao {}

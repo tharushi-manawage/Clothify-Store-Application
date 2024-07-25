@@ -11,35 +11,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #C9E0EB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.pos.controller.user.ReportsFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
+      <Rectangle fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
       <Text fill="WHITE" layoutX="434.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
       <Text layoutX="363.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Details" />
+      <JFXButton fx:id="btnPreviewEmployeeReport" layoutX="501.0" layoutY="96.0" onAction="#btnPreviewEmployeeReportOnAction" style="-fx-background-color: #4d4d4d;" text="Preview Report" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
       <Text layoutX="363.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Details" />
+      <JFXButton fx:id="btnPreviewSupplierReport" layoutX="501.0" layoutY="132.0" onAction="#btnPreviewSupplierReportOnAction" style="-fx-background-color: #4d4d4d;" text="Preview Report" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
       <Text layoutX="363.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Details" />
+      <JFXButton fx:id="btnPreviewInventoryReport" layoutX="501.0" layoutY="168.0" onAction="#btnPreviewInventoryReportOnAction" style="-fx-background-color: #4d4d4d;" text="Preview Report" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
       <Text layoutX="363.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Details" />
-      <JFXButton fx:id="btnPreviewEmployeeReport" layoutX="501.0" layoutY="96.0" onAction="#btnPreviewEmployeeReportOnAction" style="-fx-background-color: #000000;" text="Preview Report" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton fx:id="btnPreviewSupplierReport" layoutX="501.0" layoutY="132.0" onAction="#btnPreviewSupplierReportOnAction" style="-fx-background-color: #000000;" text="Preview Report" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton fx:id="btnPreviewInventoryReport" layoutX="501.0" layoutY="168.0" onAction="#btnPreviewInventoryReportOnAction" style="-fx-background-color: #000000;" text="Preview Report" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton layoutX="501.0" layoutY="204.0" style="-fx-background-color: #000000;" text="Preview Report" textFill="WHITE">
+      <JFXButton layoutX="501.0" layoutY="204.0" style="-fx-background-color: #4d4d4d;" text="Preview Report" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

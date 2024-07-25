@@ -1,24 +1,24 @@
 package edu.icet.pos.dto;
 
+import java.time.LocalDate;
 import lombok.*;
-import java.util.Date;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
 @ToString
 public class User {
-    private String id;
-    private String type;
+    private String userID;
+    private String userType;
     private String name;
-    private Date dob;
+    private LocalDate dob;
     private String email;
     private String password;
-    private Date joinedDate;
-    private String nic;
+    private LocalDate registeredDate;
+    private String nicNumber;
     private String city;
     private String province;
     private String contactNumber1;
     private String contactNumber2;
-    private String status;
+    private String userStatus;
 }

@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.pos.controller.product.InventoryManageFormController">
     <children>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
+        <Rectangle fill="#37a2d6" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="960.0" />
         <Text fill="WHITE" layoutX="372.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Inventory">
             <font>
                 <Font name="System Bold" size="25.0" />
@@ -27,6 +27,31 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
+      <JFXComboBox fx:id="cmbSupplierID" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="119.0" prefHeight="25.0" prefWidth="200.0" promptText="Supplier ID" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXComboBox fx:id="cmbCategory" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="171.0" prefHeight="25.0" prefWidth="200.0" promptText="Product Category" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXComboBox fx:id="cmbProductCode" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="223.0" prefHeight="25.0" prefWidth="200.0" promptText="Product Code" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+        <JFXTextField fx:id="txtProductName" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="275.0" prefHeight="25.0" prefWidth="200.0" promptText="Product Name" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbSize" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="327.0" prefHeight="25.0" prefWidth="200.0" promptText="Size" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXTextField fx:id="txtPrice" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="378.0" prefHeight="25.0" prefWidth="200.0" promptText="Price (Rs.)" unFocusColor="BLACK" />
+        <JFXTextField fx:id="txtQuantityOnHand" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="429.0" prefHeight="25.0" prefWidth="200.0" promptText="Quantity On Hand" unFocusColor="BLACK" />
+        <JFXTextField fx:id="txtAddedDate" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="480.0" prefHeight="25.0" prefWidth="200.0" promptText="Added Date" unFocusColor="BLACK" />
+        <Separator layoutX="261.0" layoutY="70.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="3.0" />
         <JFXComboBox fx:id="cmbProductID" focusColor="BLACK" labelFloat="true" layoutX="282.0" layoutY="75.0" prefHeight="25.0" prefWidth="200.0" promptText="Product ID" unFocusColor="BLACK">
             <cursor>
                 <Cursor fx:constant="HAND" />
@@ -47,7 +72,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-        <Separator layoutX="261.0" layoutY="70.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="3.0" />
+        <Separator layoutX="282.0" layoutY="247.0" prefHeight="3.0" prefWidth="659.0" />
         <Text layoutX="560.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Details">
             <font>
                 <Font name="System Bold" size="14.0" />
@@ -59,11 +84,11 @@
                 <TableColumn fx:id="colSupplierID" prefWidth="71.0" text="Supplier ID" />
                 <TableColumn fx:id="colCategory" prefWidth="107.0" text="Category" />
                 <TableColumn fx:id="colCode" prefWidth="66.0" text="Code" />
-                <TableColumn fx:id="colProduct" prefWidth="110.0" text="Product" />
+                <TableColumn fx:id="colProductName" prefWidth="110.0" text="Product Name" />
                 <TableColumn fx:id="colSize" minWidth="0.0" prefWidth="45.0" text="Size" />
                 <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="74.0" text="Price (Rs.)" />
                 <TableColumn fx:id="colQTY" minWidth="0.0" prefWidth="47.0" text="QTY" />
-                <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="70.0" text="Date" />
+                <TableColumn fx:id="colAddedDate" minWidth="0.0" prefWidth="70.0" text="Added On" />
             </columns>
         </TableView>
         <JFXButton fx:id="btnPrint" layoutX="889.0" layoutY="498.0" onAction="#btnPrintOnAction" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #000000;" text="Print" textFill="WHITE">
@@ -71,30 +96,5 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-        <JFXTextField fx:id="txtProductName" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="275.0" prefHeight="25.0" prefWidth="200.0" promptText="Product Name" unFocusColor="BLACK" />
-        <JFXTextField fx:id="txtQuantityOnHand" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="429.0" prefHeight="25.0" prefWidth="200.0" promptText="Quantity On Hand" unFocusColor="BLACK" />
-        <JFXTextField fx:id="txtAddedDate" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="480.0" prefHeight="25.0" prefWidth="200.0" promptText="Added Date" unFocusColor="BLACK" />
-        <Separator layoutX="282.0" layoutY="247.0" prefHeight="3.0" prefWidth="659.0" />
-      <JFXComboBox fx:id="cmbSupplierID" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="119.0" prefHeight="25.0" prefWidth="200.0" promptText="Supplier ID" unFocusColor="BLACK">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXComboBox>
-      <JFXComboBox fx:id="cmbCategory" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="171.0" prefHeight="25.0" prefWidth="200.0" promptText="Category" unFocusColor="BLACK">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXComboBox>
-      <JFXComboBox fx:id="cmbProductCode" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="223.0" prefHeight="25.0" prefWidth="200.0" promptText="Product Code" unFocusColor="BLACK">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXComboBox>
-      <JFXComboBox fx:id="cmbSize" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="327.0" prefHeight="25.0" prefWidth="200.0" promptText="Size" unFocusColor="BLACK">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXComboBox>
-      <JFXTextField fx:id="txtPrice" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="378.0" prefHeight="25.0" prefWidth="200.0" promptText="Price (Rs.)" unFocusColor="BLACK" />
     </children>
 </AnchorPane>

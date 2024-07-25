@@ -1,4 +1,3 @@
 package edu.icet.pos.bo;
 
-public interface SuperBo {
-}
+public interface SuperBo {}
